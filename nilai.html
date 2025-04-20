@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Penilaian</title>
+</head>
+<body>
+    <h1>Hasil Penilaian</h1>
+    {% if score >= 90 %}
+        <p>Nilai Anda: {{ score }} - Sangat Baik! 🎉</p>
+    {% elif score >= 75 %}
+        <p>Nilai Anda: {{ score }} - Baik 👍</p>
+    {% elif score >= 60 %}
+        <p>Nilai Anda: {{ score }} - Cukup 😊</p>
+    {% else %}
+        <p>Nilai Anda: {{ score }} - Perlu Perbaikan 😢</p>
+    {% endif %}
+</body>
+</html>

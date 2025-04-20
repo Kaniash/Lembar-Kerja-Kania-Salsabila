@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Mahasiswa</title>
+</head>
+<body>
+    <h1>Daftar Mahasiswa</h1>
+    <ul>
+        {% for mhs in mahasiswa %}
+            <li>
+                {{ mhs.nama }} - Nilai: {{ mhs.nilai }} - 
+                {% if mhs.nilai >= 90 %}
+                    Lulus dengan Pujian 🎓
+                {% elif mhs.nilai >= 75 %}
+                    Lulus 👍
+                {% elif mhs.nilai >= 60 %}
+                    Lulus Bersyarat 😊
+                {% else %}
+                    Tidak Lulus 😢
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
